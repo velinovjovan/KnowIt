@@ -33,7 +33,7 @@ function HeroButtons() {
       <Box
         title={"🎮 Classic Mode 🎮"}
         text={
-          "Not sure what you’re in the mood for? Hit Random Questions and let fate decide! You’ll get 20 handpicked questions from all categories. Every round’s a surprise, so no two games are ever the same."
+          "Jump into Classic Mode and choose your favorite category! You’ll get 20 carefully selected questions with no time limit — take it easy and enjoy the challenge at your own pace."
         }
       >
         <div className="flex flex-row flex-wrap gap-2 lg:justify-between justify-center lg:gap-0 gap-5">
