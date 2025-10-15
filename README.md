@@ -1,6 +1,6 @@
 # KnowIt 🤔
 
-**KnowIt** is a fast, fun, and challenging trivia web app designed to test your knowledge across a wide range of topics.
+**KnowIt** is a fast, fun, and challenging trivia web app designed to test your knowledge across a wide range of topics. With multiple game modes, vibrant visuals, and carefully curated questions, every round keeps you thinking on your feet. Challenge yourself, compete with friends, and discover just how much you really know — only on KnowIt!
 
 ---
 
