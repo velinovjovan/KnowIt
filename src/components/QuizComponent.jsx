@@ -15,10 +15,10 @@ function QuizComponent({ question, data, gm, dispatch, score }) {
     data[question].correct_answer,
   ].sort();
 
-  const handleOnClick = (e) => {
+  const handleOnClick = (num) => {
     setEnable(false);
 
-    if (e.target.textContent === decode(data[question].correct_answer)) {
+    if (answers[num] === data[question].correct_answer) {
       dispatch({ type: "score" });
     } else if (Number(gm) === 3) {
       dispatch({ type: "finished" });
@@ -50,7 +50,7 @@ function QuizComponent({ question, data, gm, dispatch, score }) {
       <div className="lg:grid-cols-2 grid-cols-1 grid-rows-2 grid gap-4 my-10 text-gray-100 font-mono">
         <button
           disabled={!enable}
-          onClick={(e) => handleOnClick(e)}
+          onClick={() => handleOnClick(0)}
           className={`py-4 px-8 ${
             enable
               ? "bg-cyan-800"
@@ -65,7 +65,7 @@ function QuizComponent({ question, data, gm, dispatch, score }) {
         </button>
         <button
           disabled={!enable}
-          onClick={(e) => handleOnClick(e)}
+          onClick={() => handleOnClick(1)}
           className={`py-4 px-8 ${
             enable
               ? "bg-cyan-800"
@@ -80,7 +80,7 @@ function QuizComponent({ question, data, gm, dispatch, score }) {
         </button>
         <button
           disabled={!enable}
-          onClick={(e) => handleOnClick(e)}
+          onClick={() => handleOnClick(2)}
           className={`py-4 px-8 ${
             enable
               ? "bg-cyan-800"
@@ -95,7 +95,7 @@ function QuizComponent({ question, data, gm, dispatch, score }) {
         </button>
         <button
           disabled={!enable}
-          onClick={(e) => handleOnClick(e)}
+          onClick={() => handleOnClick(3)}
           className={`py-4 px-8 ${
             enable
               ? "bg-cyan-800"
