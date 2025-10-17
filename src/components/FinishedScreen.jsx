@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 function FinishedScreen({ score, dispatch }) {
+  window.scrollTo(0, 0);
+
   return (
     <div className="min-h-screen flex-col flex w-full bg-gradient-to-b from-slate-800 to-sky-900 px-5 py-24">
       <p className="mx-auto text-center text-white font-bold font-mono lg:text-4xl text-xl mt-40 max-w-[61rem]">
