@@ -36,90 +36,109 @@ function QuizComponent({ question, data, gm, dispatch, score }) {
   };
 
   return (
-    <div className="bg-[#1e293b] mt-5 lg:mt-20 mx-auto flex flex-col justify-between min-h-[25rem] max-w-[60rem] lg:w-[60rem] px-10 py-7 border-3 border-[#444444] rounded-xl">
-      <div className="flex justify-between text-gray-200 text-bold text-lg mb-2">
-        <p>
-          {Number(gm) === 3 ? score + 1 : question + 1} /{" "}
-          {Number(gm) === 3 ? "♾️" : 20}
-        </p>
-        <p>Score: {score}</p>
+    <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm mt-0 mx-auto flex flex-col justify-between min-h-[25rem] max-w-[60rem] lg:w-[60rem] px-10 py-7 border-2 border-slate-700/50 rounded-2xl shadow-2xl hover:border-cyan-500/30 transition-all duration-500 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-pink-500/5 opacity-50" />
+      <div className="relative z-10">
+        <div className="flex justify-between text-gray-200 font-semibold text-lg mb-6">
+          <p className="bg-slate-700/50 px-4 py-2 rounded-lg border border-slate-600/50">
+            {Number(gm) === 3 ? score + 1 : question + 1} /{" "}
+            {Number(gm) === 3 ? "♾️" : 20}
+          </p>
+          <p className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 px-4 py-2 rounded-lg border border-cyan-500/30">
+            Score: <span className="text-cyan-400 font-bold">{score}</span>
+          </p>
+        </div>
+
+        <div className="bg-slate-700/30 rounded-xl p-6 mb-10 border border-slate-600/30">
+          <p className="text-white font-bold text-xl leading-relaxed">
+            {decode(data[question].question)}
+          </p>
+        </div>
+
+        <div className="lg:grid-cols-2 grid-cols-1 grid-rows-2 grid gap-4 mb-6 text-gray-100 font-medium">
+          <button
+            disabled={!enable}
+            onClick={() => handleOnClick(0)}
+            className={`py-4 px-8 rounded-xl transition-all duration-300 font-semibold text-base shadow-lg relative overflow-hidden group ${
+              enable
+                ? "bg-gradient-to-r from-cyan-700 to-cyan-800 hover:from-cyan-600 hover:to-cyan-700 hover:scale-105 hover:shadow-cyan-500/50"
+                : data[question].correct_answer === answers[0]
+                ? "bg-gradient-to-r from-emerald-600 to-emerald-700 shadow-emerald-500/50"
+                : "bg-gradient-to-r from-rose-600 to-rose-700 shadow-rose-500/50"
+            }`}
+          >
+            <span className="relative z-10">{decode(answers[0])}</span>
+            {enable && (
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+            )}
+          </button>
+
+          <button
+            disabled={!enable}
+            onClick={() => handleOnClick(1)}
+            className={`py-4 px-8 rounded-xl transition-all duration-300 font-semibold text-base shadow-lg relative overflow-hidden group ${
+              enable
+                ? "bg-gradient-to-r from-cyan-700 to-cyan-800 hover:from-cyan-600 hover:to-cyan-700 hover:scale-105 hover:shadow-cyan-500/50"
+                : data[question].correct_answer === answers[1]
+                ? "bg-gradient-to-r from-emerald-600 to-emerald-700 shadow-emerald-500/50"
+                : "bg-gradient-to-r from-rose-600 to-rose-700 shadow-rose-500/50"
+            }`}
+          >
+            <span className="relative z-10">{decode(answers[1])}</span>
+            {enable && (
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+            )}
+          </button>
+
+          <button
+            disabled={!enable}
+            onClick={() => handleOnClick(2)}
+            className={`py-4 px-8 rounded-xl transition-all duration-300 font-semibold text-base shadow-lg relative overflow-hidden group ${
+              enable
+                ? "bg-gradient-to-r from-cyan-700 to-cyan-800 hover:from-cyan-600 hover:to-cyan-700 hover:scale-105 hover:shadow-cyan-500/50"
+                : data[question].correct_answer === answers[2]
+                ? "bg-gradient-to-r from-emerald-600 to-emerald-700 shadow-emerald-500/50"
+                : "bg-gradient-to-r from-rose-600 to-rose-700 shadow-rose-500/50"
+            }`}
+          >
+            <span className="relative z-10">{decode(answers[2])}</span>
+            {enable && (
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+            )}
+          </button>
+
+          <button
+            disabled={!enable}
+            onClick={() => handleOnClick(3)}
+            className={`py-4 px-8 rounded-xl transition-all duration-300 font-semibold text-base shadow-lg relative overflow-hidden group ${
+              enable
+                ? "bg-gradient-to-r from-cyan-700 to-cyan-800 hover:from-cyan-600 hover:to-cyan-700 hover:scale-105 hover:shadow-cyan-500/50"
+                : data[question].correct_answer === answers[3]
+                ? "bg-gradient-to-r from-emerald-600 to-emerald-700 shadow-emerald-500/50"
+                : "bg-gradient-to-r from-rose-600 to-rose-700 shadow-rose-500/50"
+            }`}
+          >
+            <span className="relative z-10">{decode(answers[3])}</span>
+            {enable && (
+              <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+            )}
+          </button>
+        </div>
+
+        <div className="flex justify-end">
+          <button
+            disabled={enable}
+            className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 py-3 px-6 rounded-xl font-bold text-white shadow-lg hover:shadow-cyan-500/50 disabled:from-slate-600 disabled:to-slate-700 disabled:text-slate-400 disabled:shadow-none transition-all duration-300 hover:scale-105"
+            onClick={handleNextQuestion}
+          >
+            {Number(gm) === 3
+              ? "Next Question"
+              : question < 19
+              ? "Next Question"
+              : "Finish"}
+          </button>
+        </div>
       </div>
-      <p className="text-white font-bold font-mono text-xl">
-        {decode(data[question].question)}
-      </p>
-      <div className="lg:grid-cols-2 grid-cols-1 grid-rows-2 grid gap-4 my-10 text-gray-100 font-mono">
-        <button
-          disabled={!enable}
-          onClick={() => handleOnClick(0)}
-          className={`py-4 px-8 ${
-            enable
-              ? "bg-cyan-800"
-              : data[question].correct_answer === answers[0]
-              ? "bg-emerald-700"
-              : "bg-rose-700"
-          } rounded-xl ${
-            enable ? "hover:bg-cyan-600" : ""
-          } transition-colors duration-300`}
-        >
-          {decode(answers[0])}
-        </button>
-        <button
-          disabled={!enable}
-          onClick={() => handleOnClick(1)}
-          className={`py-4 px-8 ${
-            enable
-              ? "bg-cyan-800"
-              : data[question].correct_answer === answers[1]
-              ? "bg-emerald-700"
-              : "bg-rose-700"
-          } rounded-xl ${
-            enable ? "hover:bg-cyan-600" : ""
-          } transition-colors duration-300`}
-        >
-          {decode(answers[1])}
-        </button>
-        <button
-          disabled={!enable}
-          onClick={() => handleOnClick(2)}
-          className={`py-4 px-8 ${
-            enable
-              ? "bg-cyan-800"
-              : data[question].correct_answer === answers[2]
-              ? "bg-emerald-700"
-              : "bg-rose-700"
-          } rounded-xl ${
-            enable ? "hover:bg-cyan-600" : ""
-          } transition-colors duration-300`}
-        >
-          {decode(answers[2])}
-        </button>
-        <button
-          disabled={!enable}
-          onClick={() => handleOnClick(3)}
-          className={`py-4 px-8 ${
-            enable
-              ? "bg-cyan-800"
-              : data[question].correct_answer === answers[3]
-              ? "bg-emerald-700"
-              : "bg-rose-700"
-          } rounded-xl ${
-            enable ? "hover:bg-cyan-600" : ""
-          } transition-colors duration-300`}
-        >
-          {decode(answers[3])}
-        </button>
-      </div>
-      <button
-        disabled={enable}
-        className="w-fit self-end bg-cyan-500 py-2 px-3 rounded-xl font-bold disabled:bg-cyan-700 disabled:text-slate-700"
-        onClick={handleNextQuestion}
-      >
-        {Number(gm) === 3
-          ? "Next Question"
-          : question < 19
-          ? "Next Question"
-          : "Finish"}
-      </button>
     </div>
   );
 }

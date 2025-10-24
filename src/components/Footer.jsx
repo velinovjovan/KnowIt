@@ -1,18 +1,21 @@
 function Footer() {
   return (
-    <footer className="bg-black">
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+    <footer className="bg-gradient-to-b from-slate-900 to-black relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-50" />
+      <div className="relative mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-slate-700 to-transparent mb-12" />
         <ul className="flex justify-center gap-6 md:gap-8">
           <li>
             <a
               href="https://github.com/velinovjovan"
               rel="noreferrer"
               target="_blank"
-              className="transition text-white hover:text-white/75"
+              className="group relative block p-3 transition-all duration-300 hover:scale-110"
             >
               <span className="sr-only">GitHub</span>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 blur-xl group-hover:opacity-75 transition-opacity duration-300" />
               <svg
-                className="size-6"
+                className="size-6 relative z-10 text-white transition-all duration-300 group-hover:text-purple-400 group-hover:rotate-12"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -30,11 +33,12 @@ function Footer() {
               href="https://www.instagram.com/velinovjovan"
               rel="noreferrer"
               target="_blank"
-              className="transition text-white hover:text-white/75"
+              className="group relative block p-3 transition-all duration-300 hover:scale-110"
             >
               <span className="sr-only">Instagram</span>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 opacity-0 blur-xl group-hover:opacity-75 transition-opacity duration-300" />
               <svg
-                className="size-6"
+                className="size-6 relative z-10 text-white transition-all duration-300 group-hover:text-pink-400 group-hover:rotate-12"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -52,11 +56,12 @@ function Footer() {
               href="https://www.linkedin.com/in/jovan-velinov-473b84356"
               rel="noreferrer"
               target="_blank"
-              className="transition text-white hover:text-white/75"
+              className="group relative block p-3 transition-all duration-300 hover:scale-110"
             >
               <span className="sr-only">LinkedIn</span>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 opacity-0 blur-xl group-hover:opacity-75 transition-opacity duration-300" />
               <svg
-                className="size-6"
+                className="size-6 relative z-10 text-white transition-all duration-300 group-hover:text-blue-400 group-hover:rotate-12"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -75,11 +80,12 @@ function Footer() {
               href="https://x.com/velinov26"
               rel="noreferrer"
               target="_blank"
-              className="transition text-white hover:text-white/75"
+              className="group relative block p-3 transition-all duration-300 hover:scale-110"
             >
               <span className="sr-only">Twitter</span>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 blur-xl group-hover:opacity-75 transition-opacity duration-300" />
               <svg
-                className="size-6"
+                className="size-6 relative z-10 text-white transition-all duration-300 group-hover:text-cyan-400 group-hover:rotate-12"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -93,11 +99,12 @@ function Footer() {
               href="https://www.reddit.com/user/velinovjovan"
               rel="noreferrer"
               target="_blank"
-              className="transition text-white hover:text-white/75"
+              className="group relative block p-3 transition-all duration-300 hover:scale-110"
             >
               <span className="sr-only">Reddit</span>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-500 to-red-600 opacity-0 blur-xl group-hover:opacity-75 transition-opacity duration-300" />
               <svg
-                className="size-6"
+                className="size-6 relative z-10 text-white transition-all duration-300 group-hover:text-orange-400 group-hover:rotate-12"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -120,6 +127,11 @@ function Footer() {
             </a>
           </li>
         </ul>
+        <p className="text-center text-gray-400 text-sm mt-12">
+          © {new Date().getFullYear()} Made with{" "}
+          <span className="text-pink-500 animate-pulse">♥</span> by Jovan
+          Velinov
+        </p>
       </div>
     </footer>
   );

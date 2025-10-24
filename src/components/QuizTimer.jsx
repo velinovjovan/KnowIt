@@ -14,7 +14,7 @@ function QuizTimer({ dispatch }) {
   }, [timer, dispatch]);
   return (
     <div className="mx-auto">
-      <span className="mb-[-2rem] mt-[-2rem] block text-2xl font-medium text-[#38bdf8]">
+      <span className="mb-[2rem] mt-[-3rem] block text-2xl font-medium text-[#38bdf8]">
         00:{addLeadingZero(timer)}
       </span>
     </div>
