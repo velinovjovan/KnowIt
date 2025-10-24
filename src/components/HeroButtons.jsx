@@ -44,7 +44,19 @@ function HeroButtons() {
           </button>
         </div>
       </Box>
-
+      <Box
+        title="♾️ Infinite Mode ♾️"
+        text="For those who can't get enough. Infinite Mode never ends! Keep answering, keep climbing, and see how long your streak lasts. One wrong move and it's game over... but the fun doesn't stop!"
+      >
+        <div className="pt-[52px]">
+          <button
+            onClick={() => handleOnClick(3, "any")}
+            className="w-full text-white bg-gradient-to-r from-pink-500 via-purple-600 to-pink-600 hover:from-pink-400 hover:via-purple-500 hover:to-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 shadow-lg shadow-purple-500/50 font-semibold rounded-xl text-base px-6 py-3.5 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/60"
+          >
+            Start Infinite Mode
+          </button>
+        </div>
+      </Box>
       <Box
         title="⚡ Quick Fire ⚡"
         text="Think fast, genius! In Quick Fire, you pick the category but there is a catch! 20 rounds, one ticking timer, and zero room for hesitation. Can you stay cool under pressure?"
@@ -60,20 +72,6 @@ function HeroButtons() {
             className="w-full text-white bg-gradient-to-r from-orange-500 via-pink-600 to-pink-700 hover:from-orange-400 hover:via-pink-500 hover:to-pink-600 focus:ring-4 focus:outline-none focus:ring-pink-300 shadow-lg shadow-pink-500/50 font-semibold rounded-xl text-base px-6 py-3.5 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/60"
           >
             Start Quick Fire
-          </button>
-        </div>
-      </Box>
-
-      <Box
-        title="♾️ Infinite Mode ♾️"
-        text="For those who can't get enough. Infinite Mode never ends! Keep answering, keep climbing, and see how long your streak lasts. One wrong move and it's game over... but the fun doesn't stop!"
-      >
-        <div className="pt-[52px]">
-          <button
-            onClick={() => handleOnClick(3, "any")}
-            className="w-full text-white bg-gradient-to-r from-pink-500 via-purple-600 to-pink-600 hover:from-pink-400 hover:via-purple-500 hover:to-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 shadow-lg shadow-purple-500/50 font-semibold rounded-xl text-base px-6 py-3.5 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/60"
-          >
-            Start Infinite Mode
           </button>
         </div>
       </Box>

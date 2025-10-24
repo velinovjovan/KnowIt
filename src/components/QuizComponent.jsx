@@ -36,7 +36,7 @@ function QuizComponent({ question, data, gm, dispatch, score }) {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm mt-0 mx-auto flex flex-col justify-between min-h-[25rem] max-w-[60rem] lg:w-[60rem] px-10 py-7 border-2 border-slate-700/50 rounded-2xl shadow-2xl hover:border-cyan-500/30 transition-all duration-500 relative overflow-hidden">
+    <div className="bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm mt-24 mx-auto flex flex-col justify-between min-h-[25rem] max-w-[60rem] lg:w-[60rem] px-10 py-7 border-2 border-slate-700/50 rounded-2xl shadow-2xl hover:border-cyan-500/30 transition-all duration-500 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-pink-500/5 opacity-50" />
       <div className="relative z-10">
         <div className="flex justify-between text-gray-200 font-semibold text-lg mb-6">

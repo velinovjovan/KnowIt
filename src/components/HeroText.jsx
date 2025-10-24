@@ -3,16 +3,18 @@ import { TypeAnimation } from "react-type-animation";
 function HeroText() {
   return (
     <>
-      <TypeAnimation
-        sequence={[
-          "Got brains? Let's see if you really know it!",
-          350,
-          "Got brains? Let's see if you really KnowIt!",
-        ]}
-        wrapper="h1"
-        speed={55}
-        className="text-5xl md:text-6xl font-mono mx-auto text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-400 font-bold text-center mb-4 drop-shadow-2xl"
-      />
+      <div className="w-fit mx-auto px-10">
+        <TypeAnimation
+          sequence={[
+            "Got brains? Let's see if you really know it!",
+            350,
+            "Got brains? Let's see if you really KnowIt!",
+          ]}
+          wrapper="h1"
+          speed={55}
+          className="text-5xl md:text-6xl font-mono text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-400 font-bold mb-4 drop-shadow-2xl"
+        />
+      </div>
 
       <div className="h-1 w-80 bg-gradient-to-r from-cyan-400 to-pink-400 mx-auto rounded-full mb-10 mt-10"></div>
 

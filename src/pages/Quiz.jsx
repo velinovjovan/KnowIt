@@ -115,7 +115,7 @@ function Quiz() {
   if (finished) return <FinishedScreen dispatch={dispatch} score={score} />;
 
   return (
-    <div className="min-h-screen flex-col flex w-full bg-gradient-to-b from-slate-800 to-sky-900 px-5 py-24">
+    <div className="min-h-screen flex-col flex w-full bg-gradient-to-b from-slate-800 to-sky-900 px-5 py-10">
       {Number(gm) === 2 ? <QuizTimer dispatch={dispatch} /> : null}
       <QuizComponent
         key={question}
