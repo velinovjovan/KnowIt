@@ -19,7 +19,7 @@ function Header() {
             onClick={() => navigate("/")}
             role="button"
             className="h-36 mx-auto cursor-pointer relative z-10 transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_30px_rgba(6,182,212,0.5)] filter group-hover:brightness-110"
-            src="favicon.png"
+            src="logo.webp"
             alt="KnowIt Logo"
           />
           <div className="absolute inset-0 border-2 border-cyan-500/0 group-hover:border-cyan-500/30 rounded-full scale-100 group-hover:scale-125 transition-all duration-500" />

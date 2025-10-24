@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 function HeroText() {
   return (
     <>
-      <div className="w-fit mx-auto px-10">
+      <div className="w-fit mx-auto px-5">
         <TypeAnimation
           sequence={[
             "Got brains? Let's see if you really know it!",
@@ -12,7 +12,7 @@ function HeroText() {
           ]}
           wrapper="h1"
           speed={55}
-          className="text-5xl md:text-6xl font-mono text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-400 font-bold mb-4 drop-shadow-2xl"
+          className="text-4xl md:text-6xl font-mono text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-400 font-bold mb-4 drop-shadow-2xl"
         />
       </div>
 
