@@ -51,14 +51,14 @@ function FinishedScreen({ score, dispatch }) {
               </>
             )}
           </div>
-          <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-400 text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">
+          <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-400 text-2xl md:text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-lg">
             Quiz Complete! 🎉
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-pink-400 mx-auto rounded-full mb-10" />
           <div className="bg-slate-700/30 rounded-2xl p-8 mb-8 border border-slate-600/30">
             <p className="text-gray-300 text-lg mb-4">Your Final Score</p>
             <div
-              className={`text-7xl md:text-8xl font-extrabold mb-4 ${
+              className={`md:text-7xl text-5xl md:text-8xl font-extrabold mb-4 ${
                 isExcellent
                   ? "text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500"
                   : isGood
