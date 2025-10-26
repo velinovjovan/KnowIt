@@ -87,11 +87,6 @@ function QuizTimer({ dispatch }) {
           />
         </div>
       </div>
-      {isUrgent && (
-        <p className="text-red-400 text-sm font-semibold text-center mt-2 animate-pulse">
-          Hurry up! ⚠️
-        </p>
-      )}
     </div>
   );
 }

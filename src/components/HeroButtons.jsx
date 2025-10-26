@@ -51,7 +51,7 @@ function HeroButtons() {
         <div className="pt-[52px]">
           <button
             onClick={() => handleOnClick(3, "any")}
-            className="w-full text-white bg-gradient-to-r from-pink-500 via-purple-600 to-pink-600 hover:from-pink-400 hover:via-purple-500 hover:to-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 shadow-lg shadow-purple-500/50 font-semibold rounded-xl text-base px-6 py-3.5 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/60"
+            className="mt-4 w-full text-white bg-gradient-to-r from-pink-500 via-purple-600 to-pink-600 hover:from-pink-400 hover:via-purple-500 hover:to-pink-500 focus:ring-4 focus:outline-none focus:ring-pink-300 shadow-lg shadow-purple-500/50 font-semibold rounded-xl text-base px-6 py-3.5 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/60"
           >
             Start Infinite Mode
           </button>

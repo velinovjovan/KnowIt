@@ -15,9 +15,7 @@ function HeroText() {
           className="text-4xl md:text-6xl font-mono text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-pink-400 font-bold mb-4 drop-shadow-2xl"
         />
       </div>
-
-      <div className="h-1 w-80 bg-gradient-to-r from-cyan-400 to-pink-400 mx-auto rounded-full mb-10 mt-10"></div>
-
+      <div className="h-1 md:w-80 w-60 bg-gradient-to-r from-cyan-400 to-pink-400 mx-auto rounded-full mb-10 mt-10"></div>
       <p className="text-xl md:text-2xl max-w-3xl mx-auto text-center mt-10 text-gray-200 px-5 leading-relaxed font-light">
         Choose one of the three gamemodes and explore trivia questions. Compete,
         learn something new and most importantly have fun!

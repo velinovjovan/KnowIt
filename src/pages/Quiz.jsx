@@ -126,7 +126,9 @@ function Quiz() {
         style={{ animationDelay: "2s" }}
       />
       <div className="relative z-10">
-        {Number(gm) === 2 ? <QuizTimer dispatch={dispatch} /> : null}
+        <div className="w-44 mx-auto">
+          {Number(gm) === 2 ? <QuizTimer dispatch={dispatch} /> : null}
+        </div>
         <QuizComponent
           key={question}
           question={question}
